@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>С Днём Рождения, Папа!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+      padding: 50px 20px;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #d2691e;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    video {
+      width: 300px;
+      max-width: 90vw;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Шарики */
+    .balloon {
+      position: absolute;
+      width: 50px;
+      max-width: 10vw;
+      animation: fly 10s linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-150px);
+        opacity: 0;
+      }
+    }
+
+    /* Медиа-запросы для адаптивности */
+
+    /* Планшеты и маленькие ноутбуки */
+    @media (max-width: 768px) {
+      body {
+        padding: 30px 15px;
+        height: auto;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+      p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+      video {
+        width: 250px;
+      }
+      .balloon {
+        width: 40px;
+      }
+    }
+
+    /* Мобильные телефоны */
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 10px;
+        height: auto;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      p {
+        font-size: 1em;
+        margin-bottom: 15px;
+      }
+      video {
+        width: 90vw;
+        max-width: 280px;
+      }
+      .balloon {
+        width: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Пятьдесят — это только цифра, а папа — настоящий герой!</h1>
+  <p>Ты всегда был и остаёшься опорой и вдохновением для нас. 
+    Пусть в твоей жизни будет много здоровья, смеха и приключений.
+С юбилеем, любимый папа!</p>
+
+  <video src="dad_birth.mp4" autoplay loop muted playsinline></video>
+
+  <!-- Шарики -->
+  <img src="red.png" class="balloon" style="left: 5%; animation-delay: 0s;" />
+  <img src="blue.png" class="balloon" style="left: 15%; animation-delay: 2s;" />
+  <img src="green.png" class="balloon" style="left: 30%; animation-delay: 4s;" />
+  <img src="orange.png" class="balloon" style="left: 50%; animation-delay: 1s;" />
+  <img src="yellow.png" class="balloon" style="left: 65%; animation-delay: 3s;" />
+  <img src="pink.png" class="balloon" style="left: 80%; animation-delay: 5s;" />
+  <img src="violet.png" class="balloon" style="left: 90%; animation-delay: 6s;" />
+</body>
+</html>
